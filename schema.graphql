@@ -1,0 +1,29 @@
+type Query {
+    class(className: String!) : Class
+    classes: [Class]
+
+    skill(id: Int!): Skill
+    skills: [Skill]
+}
+
+type ClassProficiencies {
+    skills: Int
+    skill_choices: [Skill]
+
+    proficiencies: Int
+    proficiency_choices: [String]
+}
+
+type Class {
+    id: Int!
+    name: String!
+    description: String
+    hit_die: String
+    skill_choices: [Skill]
+}
+
+type Skill {
+    id: Int!
+    name: String!
+    description: String
+}
